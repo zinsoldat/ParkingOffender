@@ -12,7 +12,6 @@ import ActionButton from 'react-native-action-button';
 export default class PODetailsScene extends Component {
   
   render() {
-    console.log(this.props);
     return (
       <View style={styles.container}>
         <ToolbarAndroid

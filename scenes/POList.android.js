@@ -6,7 +6,7 @@ import {
   ToolbarAndroid
 } from 'react-native';
 
-import POList from '../components/POList/POList'
+import POList from '../components/POList/POListContainer'
 import ActionButton from 'react-native-action-button';
 
 export default class POListScene extends Component {
