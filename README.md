@@ -33,7 +33,7 @@ Show and edit the settings for the app.
 -------------------------------------------
 
 # App State
-```json
+```JavaScript
  {
         // toolbar state
         title: 'Parking Offenders',
@@ -59,3 +59,5 @@ Show and edit the settings for the app.
 ```
 
 # Database
+Parkin Offender Scheme:
+

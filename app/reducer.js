@@ -19,7 +19,7 @@ function initilizeState() {
 
         // list state
         parkingOffenderFilter: 'ALL',
-        parkingOffenderFilters: ['ALL', 'SENDED', 'NOT_SENDED'],
+        parkingOffenderFilters: ['ALL', 'SENDED', 'NOT SENDED'],
         parkingOffenders: dataProvider.getParkingOffenders(),
 
         // edit/show state
@@ -32,6 +32,7 @@ function initilizeState() {
 function parkingOffenderApp(state = initilizeState(), action) {
     // For now, don’t handle any actions
     // and just return the state given to us.
+    console.log(action);
     let newState = {};
     switch (action.type) {
         case SHOW_LIST:
@@ -39,7 +40,8 @@ function parkingOffenderApp(state = initilizeState(), action) {
                 title: 'Parking Offenders',
                 actions: [actions.filter, actions.settings],
                 showBackButton: false,
-                scene: SHOW_LIST
+                scene: SHOW_LIST,
+                parkingOffenderFilter: action.data ? action.data : parkingOffenderFilter
             });
             break;
         case SHOW_PO:

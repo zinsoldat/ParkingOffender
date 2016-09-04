@@ -5,6 +5,7 @@ import {
 } from 'react-native';
 
 import Toolbar from '../containers/Toolbar';
+import FilterBar from '../containers/FilterBar';
 import POList from '../containers/POList';
 import ActionButton from '../containers/ActionButton';
 
@@ -18,6 +19,7 @@ class POListScene extends Component {
         return (
             <View store={this.store} style={styles.view}>
                 <Toolbar />
+                <FilterBar />
                 <POList />
                 <ActionButton />
             </View>

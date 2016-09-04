@@ -28,8 +28,8 @@ export function deletePO(po) {
     return { type: DELETE_PO, data: po };
 }
 
-export function showList() {
-    return { type: SHOW_LIST };
+export function showList(filter) {
+    return { type: SHOW_LIST, data: filter};
 }
 
 export function showSettings(settings) {

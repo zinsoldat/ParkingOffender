@@ -9,14 +9,14 @@ const getVisibleParkingOffenders = (parkingOffenders, filter = 'ALL') => {
     switch (filter) {
         case 'SENDED':
             filteredParkingOffenders = parkingOffenders.filter((po) => {
-                po.status.sended
+                return po.sended.status;
             });
 
             break;
 
-        case 'NOT_SENDED':
+        case 'NOT SENDED':
             filteredParkingOffenders = parkingOffenders.filter((po) => {
-                !po.status.sended
+                return !po.sended.status;
             });
             break;
 
