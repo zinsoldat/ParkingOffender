@@ -41,7 +41,7 @@ function parkingOffenderApp(state = initilizeState(), action) {
                 actions: [actions.filter, actions.settings],
                 showBackButton: false,
                 scene: SHOW_LIST,
-                parkingOffenderFilter: action.data ? action.data : parkingOffenderFilter
+                parkingOffenderFilter: action.data ? action.data : state.parkingOffenderFilter
             });
             break;
         case SHOW_PO:
