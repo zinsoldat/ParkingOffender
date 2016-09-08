@@ -12,7 +12,7 @@ class FilterBar extends Component {
 
     render() {
         // calculate width fo select option based on the amoutn of the options. also substract width for the border
-        let widthOpton = (width / this.props.options.length) - 2 * this.props.options.length;
+        let widthOpton = (width / this.props.options.length) - 3 * this.props.options.length;
         return (
             <View style={styles.filterBar}>
                 <SegmentedControls

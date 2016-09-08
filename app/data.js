@@ -18,6 +18,7 @@ const testData = [
     {   
         parkingOffenderID: 1,
         title: 'HP AD 1570',
+        comment: '',
         address: {
             zipCode: '',
             city: '',
@@ -35,6 +36,7 @@ const testData = [
     {
         parkingOffenderID: 2,
         title: 'XY UI 7895',
+        comment: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -52,6 +54,7 @@ const testData = [
     {
         parkingOffenderID: 3,
         title: 'K UL 1234',
+        comment: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -69,6 +72,7 @@ const testData = [
     {
         parkingOffenderID: 4,
         title: 'HD L 555',
+        comment: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -86,6 +90,7 @@ const testData = [
     {
         parkingOffenderID: 5,
         title: 'KU PO 569',
+        comment: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -103,6 +108,7 @@ const testData = [
     {
         parkingOffenderID: 6,
         title: 'MA HU 8523',
+        comment: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -120,6 +126,7 @@ const testData = [
     {
         parkingOffenderID: 7,
         title: 'CC DD 12',
+        comment: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -137,6 +144,7 @@ const testData = [
     {
         parkingOffenderID: 8,
         title: 'AZ YU 777',
+        comment: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -154,6 +162,7 @@ const testData = [
     {
         parkingOffenderID: 9,
         title: 'AZ YU 777',
+        comment: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -171,6 +180,7 @@ const testData = [
     {
         parkingOffenderID: 10,
         title: 'AZ YU 777',
+        comment: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -188,6 +198,7 @@ const testData = [
     {
         parkingOffenderID: 11,
         title: 'AZ YU 777',
+        comment: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -205,6 +216,7 @@ const testData = [
     {
         parkingOffenderID: 12,
         title: 'AZ YU 777',
+        comment: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',

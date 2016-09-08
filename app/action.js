@@ -6,6 +6,7 @@ export const DELETE_PO = 'DELETE_PARKING_OFFENDER';
 export const SHOW_LIST = 'SHOW_LIST';
 export const SHOW_SETTINGS = 'SHOW_SETTINGS';
 export const SAVE_SETTINGS = 'SAVE_SETTINGS';
+export const ACTION_SELECTED = 'ACTION_SELECTED';
 
 
 export function savePO(po) {
@@ -39,3 +40,8 @@ export function showSettings(settings) {
 export function saveSettings(settings) {
     return { type: SAVE_SETTINGS, data: settings };
 }
+
+export function actionSelected(action) {
+    return { type: ACTION_SELECTED, data: action };
+}
+

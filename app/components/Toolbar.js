@@ -16,15 +16,17 @@ class Toolbar extends Component {
         let props = {
                 style: styles.toolbar,
                 title: this.props.title,
-                onActionSelected: this.onActionSelected,
+                onActionSelected: this.props.onActionSelected,
                 titleColor: '#FFFFFF',
-                subTitleColor: '#FFFFFF'
+                subTitleColor: '#FFFFFF',
+                actions: this.props.actions
         }
         if(this.props.showBackButton) {
             props.navIcon = {uri: 'ic_navigate_before_white_24dp'};
             props.onIconClicked = () => {this.props.onBack(this.props.scene) };
         }
 
+        console.log(props);
         let navBar = React.createElement(ToolbarAndroid, props);
         return (
             navBar

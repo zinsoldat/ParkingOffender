@@ -15,7 +15,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onBack: function(source) {
+        onBack: function onBack(source) {
             switch(source) {
                 case SHOW_LIST:
                     dispatch(showList());
@@ -25,6 +25,9 @@ const mapDispatchToProps = (dispatch) => {
                     break;
             }
             Actions.pop();
+        },
+        onActionSelected: function onActionSelected(action) {
+
         }
     }
 }

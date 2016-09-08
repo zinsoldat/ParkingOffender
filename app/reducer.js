@@ -1,4 +1,4 @@
-import { SAVE_PO, SEND_PO, SHOW_PO, EDIT_PO, DELETE_PO, SHOW_LIST, SHOW_SETTINGS, SAVE_SETTINGS } from './action';
+import { SAVE_PO, SEND_PO, SHOW_PO, EDIT_PO, DELETE_PO, SHOW_LIST, SHOW_SETTINGS, SAVE_SETTINGS, ACTION_SELECTED } from './action';
 import Data from './data';
 
 function initilizeState() {
@@ -6,7 +6,7 @@ function initilizeState() {
     let initialState = {
         // toolbar state
         title: 'Parking Offenders',
-        actions: [],
+        actions: [actions.send, actions.settings],
         showBackButton: false,
         scene: SHOW_LIST,
 
@@ -30,15 +30,13 @@ function initilizeState() {
 }
 
 function parkingOffenderApp(state = initilizeState(), action) {
-    // For now, don’t handle any actions
-    // and just return the state given to us.
     console.log(action);
     let newState = {};
     switch (action.type) {
         case SHOW_LIST:
             Object.assign(newState, state, {
                 title: 'Parking Offenders',
-                actions: [actions.filter, actions.settings],
+                actions: [actions.send, actions.settings],
                 showBackButton: false,
                 scene: SHOW_LIST,
                 parkingOffenderFilter: action.data ? action.data : state.parkingOffenderFilter
@@ -53,48 +51,51 @@ function parkingOffenderApp(state = initilizeState(), action) {
                 scene: SHOW_PO
             });
             break;
+
+        case ACTION_SELECTED:
+
+            break;
         default:
             newState = state;
     }
-
     console.log(newState);
     return newState
 }
 
 const actions = {
-    filter: {
-        title: 'Filter',
-        icon: {uri: ''},
+    send: {
+        title: 'filter',
+        icon: {uri: 'ic_mail_outline_white_24dp'},
         show: 'always',
         showWithText: false
     },
     save: {
-        title: 'Save',
+        title: 'save',
         icon: {uri: ''},
         show: 'always',
         showWithText: false
     },
     cancel: {
-        title: 'Cancel',
+        title: 'cancel',
         icon: {uri: ''},
         show: 'always',
         showWithText: false
     },
     settings: {
-        title: 'Settings',
-        icon: {uri: ''},
+        title: 'settings',
+        icon: {uri: 'ic_settings_white_24dp'},
         show: 'always',
         showWithText: false
     },
     edit: {
-        title: 'Edit',
-        icon: {uri: ''},
+        title: 'edit',
+        icon: {uri: 'ic_mode_edit_white_24dp'},
         show: 'always',
         showWithText: false
     },
     delete: {
-        title: 'Delete',
-        icon: {uri: ''},
+        title: 'delete',
+        icon: {uri: 'ic_delete_white_24dp'},
         show: 'always',
         showWithText: false
     }
