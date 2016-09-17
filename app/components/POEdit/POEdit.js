@@ -7,7 +7,6 @@ class POEdit extends Component {
     }
 
     render() {
-        console.log(this.props);
         return (
             <View style={styles.detailContainer}>
                 <Image style={styles.image}

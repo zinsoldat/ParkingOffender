@@ -27,12 +27,10 @@ function getNewParkingOffender() {
 
 const mapStateToProps = (state) => {
   let parkingOffender = state.parkingOffender;
-  console.log(Object.keys(parkingOffender).length);
   if (!Object.keys(parkingOffender).length) {
     parkingOffender = getNewParkingOffender();
   }
-  console.log(parkingOffender);
-
+  
   return {
     parkingOffender: parkingOffender
   }
