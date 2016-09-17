@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { showList } from '../action';
-import FilterBar from '../components/FilterBar';
+import { showList } from '../../action';
+import FilterBar from './FilterBar';
 
 const mapStateToProps = (state) => {
     return {

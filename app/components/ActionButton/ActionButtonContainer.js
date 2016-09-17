@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { showPO, editPO, showSettings } from '../action';
-import ActionButton from '../components/ActionButton';
+import { showPO, editPO, showSettings } from '../../action';
+import ActionButton from './ActionButton';
 
 const mapStateToProps = (state) => {
     return {

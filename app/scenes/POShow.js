@@ -4,9 +4,9 @@ import {
     View
 } from 'react-native';
 
-import Toolbar from '../containers/Toolbar';
-import POShow from '../containers/POShow';
-import ActionButton from '../containers/ActionButton';
+import Toolbar from '../components/Toolbar/ToolbarContainer';
+import POShow from '../components/POShow/POShowContainer';
+import ActionButton from '../components/ActionButton/ActionButtonContainer';
 
 class POShowScene extends Component {
     constructor(props) {

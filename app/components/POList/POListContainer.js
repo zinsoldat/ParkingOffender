@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux'
-import { showPO, editPO, showSettings } from '../action';
-import POList from '../components/POList';
+import { showPO, editPO, showSettings } from '../../action';
+import POList from './POList';
 
 const getVisibleParkingOffenders = (parkingOffenders, filter = 'ALL') => {
     let filteredParkingOffenders = [];

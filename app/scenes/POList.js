@@ -4,10 +4,10 @@ import {
     View
 } from 'react-native';
 
-import Toolbar from '../containers/Toolbar';
-import FilterBar from '../containers/FilterBar';
-import POList from '../containers/POList';
-import ActionButton from '../containers/ActionButton';
+import Toolbar from '../components/Toolbar/ToolbarContainer';
+import FilterBar from '../components/FilterBar/FilterBarContainer';
+import POList from '../components/POList/POListContainer';
+import ActionButton from '../components/ActionButton/ActionButtonContainer';
 
 class POListScene extends Component {
     constructor(props) {

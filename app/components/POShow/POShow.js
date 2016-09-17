@@ -7,14 +7,6 @@ class POShow extends Component {
     }
 
     render() {
-
-        console.log(this.props.parkingOffender.address.zipCode || 'zipCode');
-        // address: {
-        //     zipCode: '12345',
-        //     city: 'Abtsteinach',
-        //     street: 'Weinheimer Str.',
-        //     streetNumber: '7'
-        // },
         return (
             <View style={styles.detailContainer}>
                 <Image style={styles.image}

@@ -22,6 +22,7 @@ const testData = [
         parkingOffenderID: 1,
         licensePlate: 'HP AD 1570',
         comment: '',
+        witness: '',
         address: {
             zipCode: '',
             city: '',
@@ -40,6 +41,7 @@ const testData = [
         parkingOffenderID: 2,
         licensePlate: 'XY UI 7895',
         comment: '',
+        witness: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -58,6 +60,7 @@ const testData = [
         parkingOffenderID: 3,
         licensePlate: 'K UL 1234',
         comment: '',
+        witness: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -76,6 +79,7 @@ const testData = [
         parkingOffenderID: 4,
         licensePlate: 'HD L 555',
         comment: '',
+        witness: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -94,6 +98,7 @@ const testData = [
         parkingOffenderID: 5,
         licensePlate: 'KU PO 569',
         comment: '',
+        witness: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -112,6 +117,7 @@ const testData = [
         parkingOffenderID: 6,
         licensePlate: 'MA HU 8523',
         comment: '',
+        witness: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -130,6 +136,7 @@ const testData = [
         parkingOffenderID: 7,
         licensePlate: 'CC DD 12',
         comment: '',
+        witness: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -148,6 +155,7 @@ const testData = [
         parkingOffenderID: 8,
         licensePlate: 'AZ YU 777',
         comment: '',
+        witness: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -166,6 +174,7 @@ const testData = [
         parkingOffenderID: 9,
         licensePlate: 'AZ YU 777',
         comment: '',
+        witness: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -184,6 +193,7 @@ const testData = [
         parkingOffenderID: 10,
         licensePlate: 'AZ YU 777',
         comment: '',
+        witness: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -202,6 +212,7 @@ const testData = [
         parkingOffenderID: 11,
         licensePlate: 'AZ YU 777',
         comment: '',
+        witness: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',
@@ -220,6 +231,7 @@ const testData = [
         parkingOffenderID: 12,
         licensePlate: 'AZ YU 777',
         comment: '',
+        witness: '',
         address: {
             zipCode: '12345',
             city: 'Abtsteinach',

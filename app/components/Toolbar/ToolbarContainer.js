@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux'
-import { showPO, editPO, showList, SHOW_LIST } from '../action';
-import Toolbar from '../components/Toolbar';
+import { showPO, editPO, showList, SHOW_LIST } from '../../action';
+import Toolbar from './Toolbar';
 
 const mapStateToProps = (state) => {
     return {

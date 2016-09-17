@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { showPO, editPO, showSettings } from '../action';
-import POShow from '../components/POShow';
+import { showPO, editPO, showSettings } from '../../action';
+import POShow from './POShow';
 
 
 const mapStateToProps = (state) => {
