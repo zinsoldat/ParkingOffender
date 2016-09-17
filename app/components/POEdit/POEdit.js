@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Dimensions, View, StyleSheet, Text, Image } from 'react-native';
 
-class POShow extends Component {
+class POEdit extends Component {
     constructor(props) {
         super(props);
     }
 
     render() {
+        console.log(this.props);
         return (
             <View style={styles.detailContainer}>
                 <Image style={styles.image}
@@ -112,4 +113,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default POShow;
+export default POEdit;

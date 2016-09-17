@@ -11,7 +11,7 @@ class POListEntry extends Component {
             <TouchableHighlight onPress={() => {this.props.onShowPo(this.props.parkingOffender)}}>
                 <View style={styles.row}>
                     <Image style={styles.thumbnail}
-                        source={this.props.parkingOffender.image || require('../404.png') }/>
+                        source={this.props.parkingOffender.image || require('../../404.png') }/>
                     <View style={styles.rowDetails}>
                         <Text style={this._getTitleStyle().rowTitle }>
                             {this.props.parkingOffender.licensePlate}

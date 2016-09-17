@@ -12,6 +12,7 @@ import { createAppStore } from '../store';
 
 import POList from '../scenes/POList';
 import POShow from '../scenes/POShow';
+import POEdit from '../scenes/POEdit';
 
 class App extends Component {
     constructor(props) {
@@ -28,8 +29,9 @@ class App extends Component {
             <Provider store={this.store}>
                 <Router hideNavBar={true}>
                     <Scene key="root">
-                        <Scene key="list" component={POList} title={this.store.getState().title} initial={true}/>
-                        <Scene key="show" component={POShow} title="Parking Offender Details"/>
+                        <Scene key="list" component={POList} initial={true}/>
+                        <Scene key="show" component={POShow} />
+                        <Scene key="edit" component={POEdit} />
                     </Scene>
                 </Router>
             </Provider>

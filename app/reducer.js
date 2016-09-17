@@ -51,7 +51,15 @@ function parkingOffenderApp(state = initilizeState(), action) {
                 scene: SHOW_PO
             });
             break;
-
+        case EDIT_PO:
+            Object.assign(newState, state, {
+                title: 'New Parking Offender',
+                actions: [actions.save, actions.cancel],
+                parkingOffender: action.data,
+                showBackButton: true,
+                scene: EDIT_PO
+            });
+            break;
         case ACTION_SELECTED:
 
             break;

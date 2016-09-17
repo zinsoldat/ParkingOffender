@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { Actions } from 'react-native-router-flux'
 import { showPO, editPO, showSettings } from '../../action';
 import ActionButton from './ActionButton';
 
@@ -14,7 +15,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onAddClick: () => {
-            dispatch(showPO({}));
+            dispatch(editPO({}));
+            Actions.edit({});
         }
     }
 }
