@@ -7,14 +7,16 @@
     "test": "jest"
   },
   "dependencies": {
-    "flux": "^2.1.1",
-    "react": "15.2.1",
-    "react-native": "0.31.0",
-    "react-native-action-button": "^1.1.11",
-    "react-native-router-flux": "^3.35.0",
-    "react-native-radio-buttons": "^0.12.1",
-    "react-redux": "^4.4.5",
-    "redux": "^3.5.2"
+    "flux": "2.1.1",
+    "lodash": "4.15.0",
+    "react": "15.3.1",
+    "react-native": "0.33.0",
+    "react-native-action-button": "2.0.3",
+    "react-native-radio-buttons": "0.12.1",
+    "react-native-router-flux": "3.35.0",
+    "react-redux": "4.4.5",
+    "realm": "0.14.3",
+    "redux": "3.6.0"
   },
   "devDependencies": {
     "jest-cli": "^14.1.0",

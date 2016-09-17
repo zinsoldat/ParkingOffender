@@ -14,7 +14,7 @@ class POListEntry extends Component {
                         source={this.props.parkingOffender.image || require('../404.png') }/>
                     <View style={styles.rowDetails}>
                         <Text style={this._getTitleStyle().rowTitle }>
-                            {this.props.parkingOffender.title}
+                            {this.props.parkingOffender.licensePlate}
                         </Text>
                         <Text style={styles.rowSubTitle}>
                             {this.props.parkingOffender.date.toLocaleDateString() 

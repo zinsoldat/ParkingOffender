@@ -23,10 +23,10 @@ class POShow extends Component {
 
                 <View style={styles.detailLineContainer}>
                     <Text style={styles.licensePlate}>
-                        {this.props.parkingOffender.title || '<licensePlate>'}
+                        {this.props.parkingOffender.licensePlate || '<licensePlate>'}
                     </Text>
                 </View>
-                
+
                 <View style={styles.separator}/>
 
                 <View style={styles.detailLineContainer}>

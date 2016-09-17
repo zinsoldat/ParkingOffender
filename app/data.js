@@ -1,10 +1,13 @@
+import db from './model/db';
+
 export default class DataProvider {
     constructor() {
-
+        this.realm = db;
     }
 
     getParkingOffenders() {
-        return testData;
+        return this.realm.objects('ParkingOffender');
+        //return testData;
     }
 
     getParkingOffendersBySended(value) {
@@ -17,7 +20,7 @@ export default class DataProvider {
 const testData = [
     {   
         parkingOffenderID: 1,
-        title: 'HP AD 1570',
+        licensePlate: 'HP AD 1570',
         comment: '',
         address: {
             zipCode: '',
@@ -35,7 +38,7 @@ const testData = [
     },
     {
         parkingOffenderID: 2,
-        title: 'XY UI 7895',
+        licensePlate: 'XY UI 7895',
         comment: '',
         address: {
             zipCode: '12345',
@@ -53,7 +56,7 @@ const testData = [
     },
     {
         parkingOffenderID: 3,
-        title: 'K UL 1234',
+        licensePlate: 'K UL 1234',
         comment: '',
         address: {
             zipCode: '12345',
@@ -71,7 +74,7 @@ const testData = [
     },
     {
         parkingOffenderID: 4,
-        title: 'HD L 555',
+        licensePlate: 'HD L 555',
         comment: '',
         address: {
             zipCode: '12345',
@@ -89,7 +92,7 @@ const testData = [
     },
     {
         parkingOffenderID: 5,
-        title: 'KU PO 569',
+        licensePlate: 'KU PO 569',
         comment: '',
         address: {
             zipCode: '12345',
@@ -107,7 +110,7 @@ const testData = [
     },
     {
         parkingOffenderID: 6,
-        title: 'MA HU 8523',
+        licensePlate: 'MA HU 8523',
         comment: '',
         address: {
             zipCode: '12345',
@@ -125,7 +128,7 @@ const testData = [
     },
     {
         parkingOffenderID: 7,
-        title: 'CC DD 12',
+        licensePlate: 'CC DD 12',
         comment: '',
         address: {
             zipCode: '12345',
@@ -143,7 +146,7 @@ const testData = [
     },
     {
         parkingOffenderID: 8,
-        title: 'AZ YU 777',
+        licensePlate: 'AZ YU 777',
         comment: '',
         address: {
             zipCode: '12345',
@@ -161,7 +164,7 @@ const testData = [
     },
     {
         parkingOffenderID: 9,
-        title: 'AZ YU 777',
+        licensePlate: 'AZ YU 777',
         comment: '',
         address: {
             zipCode: '12345',
@@ -179,7 +182,7 @@ const testData = [
     },
     {
         parkingOffenderID: 10,
-        title: 'AZ YU 777',
+        licensePlate: 'AZ YU 777',
         comment: '',
         address: {
             zipCode: '12345',
@@ -197,7 +200,7 @@ const testData = [
     },
     {
         parkingOffenderID: 11,
-        title: 'AZ YU 777',
+        licensePlate: 'AZ YU 777',
         comment: '',
         address: {
             zipCode: '12345',
@@ -215,7 +218,7 @@ const testData = [
     },
     {
         parkingOffenderID: 12,
-        title: 'AZ YU 777',
+        licensePlate: 'AZ YU 777',
         comment: '',
         address: {
             zipCode: '12345',

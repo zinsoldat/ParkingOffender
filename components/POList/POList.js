@@ -10,6 +10,7 @@ let POList = ({parkingOffenders, onParkingOffenderClick}) => {
             renderRow={(rowData, sectionID, rowID, highlightRow) => {
                 return <POListEntry {...rowData} onParkingOffenderClick={onParkingOffenderClick}/>;
             } }
+            enableEmptySections={true}
             renderSeparator={this._renderSeparator}
             renderScrollComponent={props => <RecyclerViewBackedScrollView {...props} />}
             />

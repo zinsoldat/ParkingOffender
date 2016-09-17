@@ -44,7 +44,7 @@ function parkingOffenderApp(state = initilizeState(), action) {
             break;
         case SHOW_PO:
             Object.assign(newState, state, { 
-                title: action.data.title,
+                title: action.data.licensePlate,
                 actions: [actions.delete, actions.edit],
                 parkingOffender: action.data,
                 showBackButton: true,
