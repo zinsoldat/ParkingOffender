@@ -6,14 +6,11 @@ export default class DataProvider {
     }
 
     getParkingOffenders() {
-        return this.realm.objects('ParkingOffender');
+        let results =  this.realm.objects('ParkingOffender');
+        let resultsArray = [];
+        results.forEach((element) => {resultsArray.push(element)});
+        return resultsArray;
         //return testData;
-    }
-
-    getParkingOffendersBySended(value) {
-        return testData.filter((parkingOffender) => {
-            return parkingOffender.sended.status === value;
-        });
     }
 }
 

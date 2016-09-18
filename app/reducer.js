@@ -20,7 +20,7 @@ function initilizeState() {
         // list state
         parkingOffenderFilter: 'ALL',
         parkingOffenderFilters: ['ALL', 'SENDED', 'NOT SENDED'],
-        parkingOffenders: dataProvider.getParkingOffenders(),
+        parkingOffenders: dataProvider.getParkingOffenders() || [],
 
         // edit/show state
         parkingOffender: {}

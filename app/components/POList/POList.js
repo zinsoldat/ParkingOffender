@@ -15,6 +15,7 @@ class POList extends Component {
         return (
             <ListView style={styles.listView}
                 dataSource={this.ds.cloneWithRows(this.props.parkingOffenders) }
+                enableEmptySections={true}
                 renderRow={this._renderRow}
                 renderSeparator={this._renderSeparator}
                 renderScrollComponent={props => <RecyclerViewBackedScrollView {...props} />}

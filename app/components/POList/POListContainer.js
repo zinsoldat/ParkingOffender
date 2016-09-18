@@ -8,6 +8,7 @@ const getVisibleParkingOffenders = (parkingOffenders, filter = 'ALL') => {
 
     switch (filter) {
         case 'SENDED':
+            //filteredParkingOffenders = parkingOffenders.filtered('sended.status == %0', true);
             filteredParkingOffenders = parkingOffenders.filter((po) => {
                 return po.sended.status;
             });
@@ -15,6 +16,7 @@ const getVisibleParkingOffenders = (parkingOffenders, filter = 'ALL') => {
             break;
 
         case 'NOT SENDED':
+            //filteredParkingOffenders = parkingOffenders.filtered('sended.status == %0', false);
             filteredParkingOffenders = parkingOffenders.filter((po) => {
                 return !po.sended.status;
             });
@@ -30,6 +32,7 @@ const getVisibleParkingOffenders = (parkingOffenders, filter = 'ALL') => {
 
 
 const mapStateToProps = (state) => {
+  console.log(state);
   return {
     parkingOffenders: getVisibleParkingOffenders(state.parkingOffenders, state.parkingOffenderFilter)
   }
