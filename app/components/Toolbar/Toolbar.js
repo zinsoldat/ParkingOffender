@@ -26,7 +26,6 @@ class Toolbar extends Component {
             props.onIconClicked = () => {this.props.onBack(this.props.scene) };
         }
 
-        console.log(props);
         let navBar = React.createElement(ToolbarAndroid, props);
         return (
             navBar
