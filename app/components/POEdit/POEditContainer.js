@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { showPO, editPO, showSettings } from '../../action';
+import { showPO, updatePO, editPO, showSettings } from '../../action';
 import POEdit from './POEdit';
 import uuid from '../../util/uuid';
 
@@ -38,6 +38,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    onLiveChange: function onLiveChange(po) {
+      dispatch(updatePO(po))
+    }
   }
 }
 

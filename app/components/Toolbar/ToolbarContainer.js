@@ -1,6 +1,20 @@
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux'
-import { showPO, editPO, showList, SHOW_LIST } from '../../action';
+import { 
+    showPO, 
+    editPO, 
+    showList,
+    savePO,
+    SAVE_PO, 
+    SEND_PO, 
+    SHOW_PO, 
+    EDIT_PO, 
+    DELETE_PO, 
+    SHOW_LIST, 
+    SHOW_SETTINGS, 
+    SAVE_SETTINGS, 
+    ACTION_SELECTED 
+} from '../../action';
 import Toolbar from './Toolbar';
 
 const mapStateToProps = (state) => {
@@ -26,8 +40,15 @@ const mapDispatchToProps = (dispatch) => {
             }
             Actions.pop();
         },
-        onActionSelected: function onActionSelected(action) {
-
+        onActionSelected: function onActionSelected(position) {
+            console.log(this);
+            let action = this.actions[position].key;
+            console.log(action);
+            switch(action){
+                case SAVE_PO:
+                    //dispatch(savePO());
+                    break;
+            }
         }
     }
 }

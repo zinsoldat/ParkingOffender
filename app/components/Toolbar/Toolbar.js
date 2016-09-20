@@ -19,7 +19,8 @@ class Toolbar extends Component {
                 onActionSelected: this.props.onActionSelected,
                 titleColor: '#FFFFFF',
                 subTitleColor: '#FFFFFF',
-                actions: this.props.actions
+                actions: this.props.actions,
+                onActionSelected: this.props.onActionSelected
         }
         if(this.props.showBackButton) {
             props.navIcon = {uri: 'ic_navigate_before_white_24dp'};

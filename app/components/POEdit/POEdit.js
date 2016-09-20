@@ -7,8 +7,10 @@ import Button from 'react-native-button'
 class POEdit extends Component {
     constructor(props) {
         super(props);
-        this.state = Object.assign({}, props.parkingOffender);
-
+        this.state = {
+            parkingOffender: Object.assign({}, props.parkingOffender)
+        };
+        console.log(this.state);
         this.choosePhotoSource = this.choosePhotoSource.bind(this);
     }
 
@@ -16,7 +18,7 @@ class POEdit extends Component {
         return (
             <View style={styles.detailContainer}>
                 <Image style={styles.image}
-                    source={this.state.image || require('../../404.png') }
+                    source={this.state.parkingOffender.image || require('../../404.png') }
                     resizeMode="contain"/>
                 <Button style={styles.buttonText} 
                     containerStyle={styles.buttonContainer} 
@@ -25,11 +27,26 @@ class POEdit extends Component {
                 </Button>
                 <View style={styles.detailLineContainer}>
                     <TextInput style={styles.licensePlate}
-                        value={this.state.licensePlate}
-                        onChangeText={(text) => this.setState({ licensePlate: text }) }
+                        value={this.state.parkingOffender.licensePlate}
+                        onChangeText={(text) => {
+                            let po = Object.assign({}, this.state.parkingOffender)
+                            po.licensePlate = text;
+                            this.setState({ parkingOffender: po });
+                        }}
                         editable={true}
                         maxLength={15}
                         placeholder="License Plate">
+                    </TextInput>
+                    <TextInput style={styles.witness}
+                        value={this.state.parkingOffender.witness}
+                        onChangeText={(text) => {
+                            let po = Object.assign({}, this.state.parkingOffender)
+                            po.witness = text;
+                            this.setState({ parkingOffender: po });
+                        }}
+                        editable={true}
+                        maxLength={15}
+                        placeholder="Witness">
                     </TextInput>
                 </View>
 
@@ -37,22 +54,34 @@ class POEdit extends Component {
 
                 <View style={styles.detailLineContainer}>
                     <TextInput style={styles.date}
-                        value={this.state.date.toLocaleDateString() }
-                        onChangeText={(text) => this.setState({ date: text }) }
+                        value={this.state.parkingOffender.date.toLocaleDateString() }
+                        onChangeText={(text) => {
+                            let po = Object.assign({}, this.state.parkingOffender)
+                            po.date = text;
+                            this.setState({ parkingOffender: po });
+                        }}
                         editable={true}>
                     </TextInput>
                 </View>
                 <View style={styles.detailLineContainer}>
                     <TextInput style={styles.street}
-                        value={this.state.address.street}
-                        onChangeText={(text) => this.setState({ address: { text: street } }) }
+                        value={this.state.parkingOffender.address.street}
+                        onChangeText={(text) => {
+                            let po = Object.assign({}, this.state.parkingOffender)
+                            po.address.street = text;
+                            this.setState({ parkingOffender: po });
+                        }}
                         editable={true}
                         maxLength={15}
                         placeholder="Street">
                     </TextInput>
                     <TextInput style={styles.streetNumber}
-                        value={this.state.address.streetNumber}
-                        onChangeText={(text) => this.setState({ address: { streetNumber: text } }) }
+                        value={this.state.parkingOffender.address.streetNumber}
+                        onChangeText={(text) => {
+                            let po = Object.assign({}, this.state.parkingOffender)
+                            po.address.streetNumber = text;
+                            this.setState({ parkingOffender: po });
+                        }}
                         editable={true}
                         maxLength={5}
                         placeholder="No">
@@ -61,15 +90,23 @@ class POEdit extends Component {
 
                 <View style={styles.detailLineContainer}>
                     <TextInput style={styles.zipCode}
-                        value={this.state.address.zipCode}
-                        onChangeText={(text) => this.setState({ address: { zipCode: text } }) }
+                        value={this.state.parkingOffender.address.zipCode}
+                        onChangeText={(text) => {
+                            let po = Object.assign({}, this.state.parkingOffender)
+                            po.address.zipCode = text;
+                            this.setState({ parkingOffender: po });
+                        }}
                         editable={true}
                         maxLength={5}
                         placeholder="ZIP">
                     </TextInput>
                     <TextInput style={styles.city}
-                        value={this.state.address.city}
-                        onChangeText={(text) => this.setState({ address: { city: text } }) }
+                        value={this.state.parkingOffender.address.city}
+                        onChangeText={(text) => {
+                            let po = Object.assign({}, this.state.parkingOffender)
+                            po.address.city = text;
+                            this.setState({ parkingOffender: po });
+                        }}
                         editable={true}
                         maxLength={25}
                         placeholder="City">
@@ -80,10 +117,15 @@ class POEdit extends Component {
 
                 <View style={styles.detailLineContainerComment}>
                     <TextInput style={styles.comment}
-                        value={this.props.parkingOffender.comment}
-                        onChangeText={(text) => this.setState({ licensePlate: text }) }
+                        value={this.state.parkingOffender.comment}
+                        onChangeText={(text) => {
+                            let po = Object.assign({}, this.state.parkingOffender)
+                            po.comment = text;
+                            this.setState({ parkingOffender: po });
+                        }}
                         editable={true}
-                        maxLength={100}>
+                        maxLength={100}
+                        placeholder="Comment">
                     </TextInput>
                 </View>
             </View>
@@ -118,12 +160,14 @@ class POEdit extends Component {
                 // or a reference to the platform specific asset location
                 if (Platform.OS === 'ios') {
                     const source = { uri: response.uri.replace('file://', ''), isStatic: true };
-                } else {
+                } else {    
                     const source = { uri: response.uri, isStatic: true };
                 }
 
+                let po = Object.assign({}, this.state.parkingOffender)
+                po.image = source;
                 this.setState({
-                    image: source
+                    parkingOffender: po
                 });
             }
         });
@@ -167,8 +211,11 @@ const styles = StyleSheet.create({
     },
     licensePlate: {
         borderWidth: 1,
-        width: width,
+        width: 150,
         fontWeight: 'bold'
+    },
+    witness: {
+        width: width-150
     },
     date: {
         width: width,

@@ -2,6 +2,7 @@ export const SAVE_PO = 'SAVE_PARKING_OFFENDER';
 export const SEND_PO = 'SEND_PARKING_OFFENDER';
 export const SHOW_PO = 'SHOW_PARKING_OFFENDER';
 export const EDIT_PO = 'EDIT_PARKING_OFFENDER';
+export const UPDATE_PO= 'UPDATE_PARKING_OFFENDER';
 export const DELETE_PO = 'DELETE_PARKING_OFFENDER';
 export const SHOW_LIST = 'SHOW_LIST';
 export const SHOW_SETTINGS = 'SHOW_SETTINGS';
@@ -11,6 +12,10 @@ export const ACTION_SELECTED = 'ACTION_SELECTED';
 
 export function savePO(po) {
     return { type: SAVE_PO, data: po };
+}
+
+export function updatePO(po) {
+    return { type: UPDATE_PO, data: po };
 }
 
 export function sendPO(po) {
